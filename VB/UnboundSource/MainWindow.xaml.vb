@@ -1,15 +1,10 @@
-Imports System.Windows
-Imports System.Windows.Controls
-Imports DevExpress.Xpf.Core
 Imports System.Collections.ObjectModel
+Imports System.Windows
 
 Namespace UnboundSource
 
-    ''' <summary>
-    ''' Interaction logic for MainWindow.xaml
-    ''' </summary>
     Public Partial Class MainWindow
-        Inherits DXWindow
+        Inherits Window
 
         Private vm As MyViewModel
 
