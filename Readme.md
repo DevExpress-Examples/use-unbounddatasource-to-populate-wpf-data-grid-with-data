@@ -15,7 +15,8 @@ This example demonstrates how to use the [UnboundDataSource](https://docs.devex
 
 ## Documentation
 
-* [UnboundDataSource](https://docs.devexpress.com/WPF/DevExpress.Xpf.Core.DataSources.UnboundDataSource)
+* [UnboundDataSource](https://docs.devexpress.com/WPF/118089/common-concepts/data-sources/unbounddatasource)
+* [UnboundDataSource Class](https://docs.devexpress.com/WPF/DevExpress.Xpf.Core.DataSources.UnboundDataSource)
 * [WPF Data Grid: Bind to Data](https://docs.devexpress.com/WPF/7352/controls-and-libraries/data-grid/bind-to-data)
 
 ## More Examples
