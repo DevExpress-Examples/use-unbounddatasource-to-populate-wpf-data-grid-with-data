@@ -1,24 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using DevExpress.Xpf.Core;
-using System.Collections.ObjectModel;
 
 namespace UnboundSource {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : DXWindow {
+    public partial class MainWindow : Window {
 
         MyViewModel vm;
 
@@ -62,7 +46,6 @@ namespace UnboundSource {
         public MyViewModel() {
             CreateList();
         }
-
         void CreateList() {
             ListPerson = new ObservableCollection<Person>();
 
@@ -71,18 +54,15 @@ namespace UnboundSource {
                 ListPerson.Add(p);
             }
         }
-
         public ObservableCollection<Person> ListPerson { get; set; }
     }
 
     public class Person {
-
         public Person(int i) {
             FirstName = "FirstName" + i;
             LastName = "LastName" + i;
             Age = i * 10;
             Group = i % 2 == 0;
-
         }
 
         public int Age { get; set; }
@@ -90,5 +70,4 @@ namespace UnboundSource {
         public object Group { get; set; }
         public string LastName { get; set; }
     }
-
 }

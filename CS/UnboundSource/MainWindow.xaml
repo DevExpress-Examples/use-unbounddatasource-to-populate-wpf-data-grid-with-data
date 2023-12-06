@@ -1,48 +1,39 @@
-<dxc:DXWindow
+<Window
     x:Class="UnboundSource.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
-    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     Title="MainWindow"
-    Width="1025"
-    Height="550"
+    Width="700"
+    Height="380"
     UseLayoutRounding="True">
-    <dxc:DXWindow.Resources />
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="9*" />
             <RowDefinition />
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <dxc:UnboundDataSource
-            x:Name="unboundDataSource1"
-            Count="5"
-            ValueNeeded="UnboundDataSource_ValueNeeded"
-            ValuePushed="UnboundDataSource_ValuePushed">
-            <dxc:UnboundDataSource.Properties>
-                <dxc:UnboundDataSourceProperty
-                    Name="UnboundFirstName"
-                    DisplayName="DisplayFirstName"
-                    PropertyType="{x:Type sys:String}" />
-                <dxc:UnboundDataSourceProperty Name="UnboundAge" PropertyType="{x:Type sys:Int32}" />
-                <dxc:UnboundDataSourceProperty Name="UnboundGroup" PropertyType="{x:Type sys:Boolean}" />
-            </dxc:UnboundDataSource.Properties>
-        </dxc:UnboundDataSource>
+        
+        <dx:UnboundDataSource x:Name="unboundDataSource1"
+                              Count="5"
+                              ValueNeeded="UnboundDataSource_ValueNeeded"
+                              ValuePushed="UnboundDataSource_ValuePushed">
+            <dx:UnboundDataSource.Properties>
+                <dx:UnboundDataSourceProperty Name="UnboundFirstName" PropertyType="{x:Type sys:String}" />
+                <dx:UnboundDataSourceProperty Name="UnboundAge" PropertyType="{x:Type sys:Int32}" />
+                <dx:UnboundDataSourceProperty Name="UnboundGroup" PropertyType="{x:Type sys:Boolean}" />
+            </dx:UnboundDataSource.Properties>
+        </dx:UnboundDataSource>
+
         <dxg:GridControl ItemsSource="{Binding Data, ElementName=unboundDataSource1}" SelectionMode="Row">
-            <dxg:GridControl.Columns>
-                <dxg:GridColumn FieldName="UnboundFirstName" />
-                <dxg:GridColumn FieldName="UnboundAge" />
-                <dxg:GridColumn FieldName="UnboundGroup" />
-            </dxg:GridControl.Columns>
-            <dxg:GridControl.View>
-                <dxg:TableView AllowPerPixelScrolling="True" ShowTotalSummary="True" />
-            </dxg:GridControl.View>
+            <dxg:GridColumn FieldName="UnboundFirstName" />
+            <dxg:GridColumn FieldName="UnboundAge" />
+            <dxg:GridColumn FieldName="UnboundGroup" />
         </dxg:GridControl>
-        <Button
-            Grid.Row="1"
-            Click="Button_Click"
-            Content="SetRowCount(10)" />
+        
+        <Button Grid.Row="1"
+                Click="Button_Click"
+                Content="SetRowCount(10)" />
     </Grid>
-</dxc:DXWindow>
+</Window>
