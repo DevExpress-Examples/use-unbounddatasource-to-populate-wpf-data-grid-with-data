@@ -25,7 +25,7 @@ This example demonstrates how to use the [UnboundDataSource](https://docs.devex
 * [Use UnboundDataSource with the Source Generator](https://github.com/DevExpress-Examples/UnboundDataSource-ViewModelGenerator)
 * [WPF Data Grid - Create Unbound Columns](https://github.com/DevExpress-Examples/wpf-data-grid-create-unbound-columns)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=use-unbounddatasource-to-populate-wpf-data-grid-with-data&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=use-unbounddatasource-to-populate-wpf-data-grid-with-data&~~~was_helpful=no)
 
